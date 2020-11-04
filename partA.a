@@ -1,0 +1,36 @@
+inputLoop:  ipa
+        jmpn inputLoop
+        jmpz break
+
+        m2m stackPtr
+
+        lda stackPtr
+        add one
+        sta stackPtr
+
+        jmp inputLoop
+
+break:  lda stackPtr
+        sub one
+        sta stackPtr
+
+print:  m2a stackPtr
+        opa
+
+        lda stackPtr
+        sub one
+        sta stackPtr
+
+        lda stackPtr
+        sub hundred
+        jmpn done
+
+        jmp print
+done:
+stop
+
+stackPtr:  .data 1 100
+hundred:  .data 1 100
+one:    .data 1 1
+
+        

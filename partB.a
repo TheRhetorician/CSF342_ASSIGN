@@ -1,0 +1,41 @@
+inputLoop: ipa
+    jmpn inputLoop
+    jmpz inputEnd
+    
+    m2m loc
+    lda loc
+    adda one
+    sta loc
+       
+    lda count
+    adda one
+    sta count
+
+    jmp inputLoop
+  
+inputEnd: 
+    lda loc
+    suba count
+    sta loc
+
+print: 
+    m2a loc
+    adda sum
+    sta sum
+    opa
+   
+    lda loc
+    adda one
+    sta loc
+    
+    lda count
+    suba one
+    sta count
+    jmpp print
+
+    stop
+
+loc: .data 1 100
+one: .data 1 1
+count: .data 1 0
+sum: .data 1 0
