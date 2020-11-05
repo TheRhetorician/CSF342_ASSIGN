@@ -1,0 +1,41 @@
+input_till_0: ipa
+    jmpn input_till_0
+    jmpz if_input_0
+    
+    m2m dataloc
+    lda dataloc
+    adda one
+    sta dataloc
+       
+    lda count
+    adda one
+    sta count
+
+    jmp input_till_0
+  
+if_input_0: 
+    lda dataloc
+    suba count
+    sta dataloc
+
+output_sum_FIFO: 
+    m2a dataloc
+    adda sum_till_count
+    sta sum_till_count
+    opa
+   
+    lda dataloc
+    adda one
+    sta dataloc
+    
+    lda count
+    suba one
+    sta count
+    jmpp output_sum_FIFO
+
+    stop
+
+dataloc: .data 1 70
+one: .data 1 1
+count: .data 1 0
+sum_till_count: .data 1 0
