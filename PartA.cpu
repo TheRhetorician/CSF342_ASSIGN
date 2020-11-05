@@ -1,3 +1,10 @@
+<!--Name            ID Number             Discipline
+Mudit Chaturvedi    2018A7PS0248H         CSE
+Hardik Parnami      2018A7PS0062H         CSE
+Kriti Jethlia       2018A7PS0223H         CSE
+Sristi Sharma       2018A7PS0299H         CSE
+Mayank Negi         2018A7PS0210H         CSE
+-->
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Machine [
 <!ELEMENT Machine (PunctChar*, Field*, FileChannel*, Register*, RegisterArray*, ConditionBit*, RAM*, Set*, Test*, Increment*, Shift*, Logical*, Arithmetic*, Branch*, TransferRtoR*, TransferRtoA*, TransferAtoR*, Decode*, SetCondBit*, IO*, MemoryAccess*, End, Comment*, EQU*, FetchSequence, MachineInstruction*, HighlightingInfo?, LoadingInfo?, IndexingInfo?, ProgramCounterInfo?, ModuleWindowsInfo?) >
