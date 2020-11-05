@@ -4,7 +4,7 @@ input_till_0:  ipa
         jmpz if_input_neg
 
         m2m dataloc
-
+      
         lda dataloc
         add one
         sta dataloc
